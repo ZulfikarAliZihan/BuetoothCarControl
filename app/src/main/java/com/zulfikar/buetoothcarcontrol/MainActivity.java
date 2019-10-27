@@ -43,24 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-//    private void findDevices() {
-//        if(!bluetoothAdapter.isDiscovering()){
-//            Intent i=new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
-//            startActivityForResult(i,0);
-//        }
-//
-//        Set<BluetoothDevice> bluetoothDevices = bluetoothAdapter.getBondedDevices();
-//
-//        if (bluetoothDevices.size()>0) {
-//            String[] name = new String[bluetoothDevices.size()];
-//            for (BluetoothDevice bt : bluetoothDevices) {
-//                devicesArrayList.add(bt.getName());
-//
-//            }
-//
-//
-//        }
-//    }
+
 
     public void discover(View view){
         bluetoothAdapter.startDiscovery();
