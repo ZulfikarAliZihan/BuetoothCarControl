@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onBluetooth(){
+    public void onBluetooth(View view){
 
         if(bluetoothAdapter==null){
             Toast.makeText(getApplicationContext(),"Your phone does not support bluetooth",Toast.LENGTH_LONG).show();
@@ -36,6 +37,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+    }
+
+    public void offBluetooth(View view){
+        if(bluetoothAdapter.isEnabled()){
+            bluetoothAdapter.disable();
+            Toast.makeText(getApplicationContext(),"Bluetooth is turned off",Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
